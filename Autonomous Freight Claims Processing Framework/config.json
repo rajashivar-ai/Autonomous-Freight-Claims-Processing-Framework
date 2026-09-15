@@ -1,0 +1,14 @@
+{
+  "provenance": "NEW_SYNTHETIC_DEMONSTRATION_NOT_SUBMITTED_EXPERIMENT",
+  "n_claims": 5000,
+  "generation_seed": 20260913,
+  "class_probabilities": [0.412, 0.386, 0.202],
+  "multi_cause_probability": 0.18,
+  "epochs": 350,
+  "search": {"l2": [0.0, 0.001, 0.01], "learning_rate": [0.03, 0.1]},
+  "confidence_threshold": 0.8,
+  "bootstrap_seed": 8821,
+  "bootstrap_resamples": 500,
+  "annotation_sampling_seed": 329,
+  "fixed_environment_repeatability_tolerance_macro_f1": 0.000001
+}

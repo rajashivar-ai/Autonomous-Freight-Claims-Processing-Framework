@@ -1,0 +1,167 @@
+{
+  "D1_raw_proxies": {
+    "n_test": 850,
+    "macro_f1": 0.6836490551454631,
+    "per_class_f1": {
+      "damage": 0.763271162123386,
+      "delay": 0.7153075822603719,
+      "shortage": 0.5723684210526315
+    },
+    "bootstrap_95_percent_interval": [
+      0.6477360792973218,
+      0.7190640237017125
+    ],
+    "accuracy": 0.7094117647058824,
+    "classification_confidence_coverage": 0.32823529411764707,
+    "accuracy_above_threshold": 0.8781362007168458,
+    "ambiguity_aware_accuracy": 0.7917647058823529,
+    "subgroups": [
+      {
+        "group_field": "region",
+        "group_value": "Asia Pacific",
+        "n": 212,
+        "macro_f1": 0.6144811180493607
+      },
+      {
+        "group_field": "region",
+        "group_value": "Europe",
+        "n": 196,
+        "macro_f1": 0.6989680641904458
+      },
+      {
+        "group_field": "region",
+        "group_value": "Latin America",
+        "n": 210,
+        "macro_f1": 0.6741858741858741
+      },
+      {
+        "group_field": "region",
+        "group_value": "North America",
+        "n": 232,
+        "macro_f1": 0.7403258667073919
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "False",
+        "n": 692,
+        "macro_f1": 0.7346282893222762
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "True",
+        "n": 158,
+        "macro_f1": 0.46050588090206573
+      }
+    ]
+  },
+  "D2_contract_normalized_proxies": {
+    "n_test": 850,
+    "macro_f1": 0.7485676907326334,
+    "per_class_f1": {
+      "damage": 0.8088235294117647,
+      "delay": 0.7854137447405329,
+      "shortage": 0.6514657980456026
+    },
+    "bootstrap_95_percent_interval": [
+      0.7124720194804754,
+      0.7785426052521274
+    ],
+    "accuracy": 0.7705882352941177,
+    "classification_confidence_coverage": 0.46352941176470586,
+    "accuracy_above_threshold": 0.8908629441624365,
+    "ambiguity_aware_accuracy": 0.8482352941176471,
+    "subgroups": [
+      {
+        "group_field": "region",
+        "group_value": "Asia Pacific",
+        "n": 212,
+        "macro_f1": 0.7059171724998924
+      },
+      {
+        "group_field": "region",
+        "group_value": "Europe",
+        "n": 196,
+        "macro_f1": 0.7602450678153833
+      },
+      {
+        "group_field": "region",
+        "group_value": "Latin America",
+        "n": 210,
+        "macro_f1": 0.7369877873835672
+      },
+      {
+        "group_field": "region",
+        "group_value": "North America",
+        "n": 232,
+        "macro_f1": 0.7866115029842647
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "False",
+        "n": 692,
+        "macro_f1": 0.8039141663939645
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "True",
+        "n": 158,
+        "macro_f1": 0.49398674940470605
+      }
+    ]
+  },
+  "D3_without_image_proxy": {
+    "n_test": 850,
+    "macro_f1": 0.6551531007343256,
+    "per_class_f1": {
+      "damage": 0.6809728183118741,
+      "delay": 0.7082152974504249,
+      "shortage": 0.576271186440678
+    },
+    "bootstrap_95_percent_interval": [
+      0.617792536289372,
+      0.6865934544807529
+    ],
+    "accuracy": 0.6741176470588235,
+    "classification_confidence_coverage": 0.1976470588235294,
+    "accuracy_above_threshold": 0.8392857142857143,
+    "ambiguity_aware_accuracy": 0.7505882352941177,
+    "subgroups": [
+      {
+        "group_field": "region",
+        "group_value": "Asia Pacific",
+        "n": 212,
+        "macro_f1": 0.6205479136425428
+      },
+      {
+        "group_field": "region",
+        "group_value": "Europe",
+        "n": 196,
+        "macro_f1": 0.6980926277233107
+      },
+      {
+        "group_field": "region",
+        "group_value": "Latin America",
+        "n": 210,
+        "macro_f1": 0.6306901972670093
+      },
+      {
+        "group_field": "region",
+        "group_value": "North America",
+        "n": 232,
+        "macro_f1": 0.6681233386496545
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "False",
+        "n": 692,
+        "macro_f1": 0.6975212289289304
+      },
+      {
+        "group_field": "synthetic_ambiguous",
+        "group_value": "True",
+        "n": 158,
+        "macro_f1": 0.46883831015802735
+      }
+    ]
+  }
+}

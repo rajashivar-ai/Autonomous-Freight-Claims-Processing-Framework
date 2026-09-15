@@ -1,0 +1,7 @@
+{
+  "unique_claim_ids": true,
+  "strict_temporal_order": true,
+  "probabilities_sum_to_one": true,
+  "finite_metrics": true,
+  "blank_annotation_fields": true
+}

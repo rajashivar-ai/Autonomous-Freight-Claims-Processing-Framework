@@ -1,0 +1,37 @@
+{
+  "D1_raw_proxies": {
+    "l2": 0.0,
+    "learning_rate": 0.1,
+    "epochs": 350,
+    "validation_macro_f1": 0.6973596263850976,
+    "features": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "D2_contract_normalized_proxies": {
+    "l2": 0.001,
+    "learning_rate": 0.1,
+    "epochs": 350,
+    "validation_macro_f1": 0.771049539708093,
+    "features": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "D3_without_image_proxy": {
+    "l2": 0.0,
+    "learning_rate": 0.1,
+    "epochs": 350,
+    "validation_macro_f1": 0.6456995098870675,
+    "features": [
+      0,
+      1,
+      2
+    ]
+  }
+}
