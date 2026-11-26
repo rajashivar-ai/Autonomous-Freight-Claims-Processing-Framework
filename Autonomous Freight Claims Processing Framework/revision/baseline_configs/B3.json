@@ -1,0 +1,40 @@
+{
+  "baseline": "B3",
+  "name": "Structured enterprise analytics",
+  "status": "Prospective fixed configuration from Table 4 of the manuscript. Specification only: no real-data B1-B4 run has been executed.",
+  "implementation": {
+    "classifier": "XGBoost multiclass",
+    "features": [
+      "shipment quantities",
+      "planned and actual transit times",
+      "service category",
+      "route characteristics",
+      "contractual tolerances",
+      "prior carrier history"
+    ],
+    "excluded": "document-derived and image-derived features",
+    "preprocessing": "encodings, imputations and transformations fit on training data only"
+  },
+  "fixed": {
+    "xgboost": {
+      "n_estimators": 500,
+      "max_depth": 5,
+      "learning_rate": 0.05,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_alpha": 0.1,
+      "reg_lambda": 5
+    },
+    "escalation_threshold": 0.8
+  },
+  "sensitivity_search_space": "same as B2 classifier space",
+  "sensitivity_trials": 40,
+  "training_seeds": [
+    13,
+    42,
+    71,
+    105,
+    2024
+  ]
+}
