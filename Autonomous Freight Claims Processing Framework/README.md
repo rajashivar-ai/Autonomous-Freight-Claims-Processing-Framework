@@ -1,6 +1,6 @@
 # Synthetic freight-claims reproducibility demonstration
 
-**All claims, evidence, carriers, contracts, and event timestamps are simulated. This is a newly created demonstration, not the implementation, dataset, or experimental record underlying the submitted manuscript.** No real operational data were available to build it. It cannot verify the manuscript's 0.890 real-data F1, 0.871 synthetic F1, 85% STP, economic claims, 40-trial searches, or independent re-annotation of 2,000 claims. Do not describe these files as historical records or independent validation.
+**All claims, evidence, carriers, contracts, and event timestamps are simulated. This is a newly created demonstration, not the implementation, dataset, or experimental record underlying the submitted manuscript.** No real operational data were available to build it. It cannot verify the manuscript's 0.890 real-data F1, 85% STP, economic claims, 40-trial searches, or independent re-annotation of 2,000 claims. Do not describe these files as historical records or independent validation.
 
 ## Run
 
@@ -55,7 +55,7 @@ Predictions use argmax over damage, delay, shortage, in that order. The confiden
 
 Macro F1 averages the three class F1 values with zero for an undefined class F1. The reported 95% intervals are percentile intervals from 500 claim-level bootstrap resamples of one fitted model's test predictions. They do not account for training variation or carrier clustering. Subgroups cover region and synthetic ambiguity, with denominators; small groups should not be interpreted as external validation. Ambiguity-aware accuracy accepts predictions matching either generator cause and is not multi-label F1. No independently validated-subset metric is reported because none exists.
 
-The predeclared same-environment repeatability tolerance is absolute macro-F1 difference <= 0.000001. A rerun of this code checks deterministic repeatability only. Recovery by an independent implementation or independent organization has not been established. Performance values are determined by execution, not selected to match the manuscript.
+The predeclared same-environment repeatability tolerance is absolute macro-F1 difference <= 0.000001. A rerun of this code checks deterministic repeatability only. A second implementation written separately from `run_demo.py`, from this README specification alone, recovered all three test macro-F1 values within this tolerance (`revision/independent_d1_d3.py`). External replication by an independent organization has not been established. Performance values are determined by execution, not selected to match the manuscript.
 
 ## Data dictionary
 
@@ -69,6 +69,13 @@ No independent reviewer has completed this exercise. Even genuine annotation of 
 
 ## Appropriate manuscript wording
 
-“We additionally provide a newly developed, explicitly synthetic demonstration of the data-generation and evaluation workflow. Its data and simplified classifiers do not reproduce the proprietary deployment or substantiate the previously reported real-data results. Logs and predictions were produced by executing the supplied scripts. Independent replication and independent human annotation remain to be completed.”
+“We additionally provide a newly developed, explicitly synthetic demonstration of the data-generation and evaluation workflow. Its data and simplified classifiers do not reproduce the proprietary deployment or substantiate the previously reported real-data results. Logs and predictions were produced by executing the supplied scripts. External replication and independent human annotation remain to be completed.”
 
-Only claim public availability after a repository is actually released and verified. This package has not been uploaded to GitHub. Before journal submission, reconcile the manuscript's original implementation, historical metrics, supplementary-material claims, and new demonstration with the actual evidence available. The IJIES Word template governs manuscript formatting; it does not authenticate experimental records.
+## Revision 4 additions (folder `revision/`)
+
+- `revision/baseline_configs/B1.json` to `B4.json`: fixed prospective B1 to B4 configurations and sensitivity search spaces from Table 4 of the manuscript. Specifications only; no real-data baseline run is included.
+- `revision/independent_d1_d3.py`: separately written D1 to D3 implementation used for the recovery check in Section 6.8.
+- `revision/economic_sensitivity.py`: 200,000-draw triangular economic sensitivity scenario (seed 20261029) behind Fig. 6.
+- `revision/probability_simulation/`: generated probability files and `evaluate_proxies.py` behind Tables 12 and 13. The probabilities are simulated proxies, not trained B1 to B4 outputs.
+
+None of these files reproduce the private-corpus results, which cannot be released.
