@@ -11,7 +11,7 @@
   "models/D1_raw_proxies.npz": "a7aee52b5b1dea3cf7bdeb93e5cda9b2b759ee433aa53b7f2e376bff1c7c56fd",
   "models/D2_contract_normalized_proxies.npz": "ab33529ea188951407b8f885ef69d8dd302592671d1ec058680431e9248ca409",
   "models/D3_without_image_proxy.npz": "fd41455f53f3c66d137977a8823d60743ecd129c108ef2b05843ca7ccab7f390",
-  "README.md": "443e449cdf0c0aff5c7500744861c31920301634874b894c1bdd8a14fa229780",
+  "README.md": "f1240358d4e1ea2a02ea024e76df102b01d20c1d975368e56f229c9c7eeac510",
   "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
   "results/metrics.json": "c5c80092be8a806396f1e4aad72e59a3511cd4abd5b7681ef08f793393e7fadf",
   "results/selected_configurations.json": "16c040a2723990ef64cd678c7deed4a39e8d7e013cc0dfb1056d2915590eb041",
