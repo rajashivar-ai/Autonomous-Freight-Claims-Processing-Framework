@@ -1,0 +1,53 @@
+{
+  "baseline": "B1",
+  "name": "Template extraction and rules",
+  "status": "Prospective fixed configuration from Table 4 of the manuscript. Specification only: no real-data B1-B4 run has been executed.",
+  "implementation": {
+    "extraction": "versioned carrier-specific templates; regular-expression capture of shipment identifier, quantities, delivery timestamps, damage keywords",
+    "rule_order": [
+      "delay",
+      "shortage",
+      "damage"
+    ],
+    "rule_semantics": "first satisfied rule assigns the class; claims satisfying no rule are escalated"
+  },
+  "fixed": {
+    "normalized_delay_threshold": 1.25,
+    "shortage_fraction_threshold": 0.03,
+    "damage_keyword_count_threshold": 2,
+    "min_required_field_completeness": 0.9
+  },
+  "sensitivity_search_space": {
+    "normalized_delay_threshold": [
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "shortage_fraction_threshold": [
+      0.01,
+      0.03,
+      0.05,
+      0.1
+    ],
+    "damage_keyword_count_threshold": [
+      1,
+      2,
+      3
+    ],
+    "min_required_field_completeness": [
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "sensitivity_trials": 40,
+  "training_seeds": [
+    13,
+    42,
+    71,
+    105,
+    2024
+  ]
+}
